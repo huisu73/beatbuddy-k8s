@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    options {
+        disableConcurrentBuilds()
+    }
     parameters {
         string(name: 'DOCKER_IMAGE_VERSION', defaultValue: '', description: 'Docker Image Version')
         choice(name: 'SERVICE', choices: ['backend', 'frontend'], description: 'Service to update')
