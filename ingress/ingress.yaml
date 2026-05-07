@@ -34,6 +34,20 @@ spec:
                 name: beatbuddy-backend-svc
                 port:
                   number: 8080
+          - path: /default-profile.jpg
+            pathType: Exact
+            backend:
+              service:
+                name: beatbuddy-backend-svc
+                port:
+                  number: 8080
+          - path: /default-group.jpg
+            pathType: Exact
+            backend:
+              service:
+                name: beatbuddy-backend-svc
+                port:
+                  number: 8080
           - path: /
             pathType: Prefix
             backend:
