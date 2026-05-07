@@ -19,7 +19,7 @@ pipeline {
                 sh 'git config user.name "jenkins"'
                 sh 'git config user.email "jenkins@beatbuddy.com"'
                 sh 'git add .'
-                sh "git commit -m 'Update ${params.SERVICE} image to ${params.DOCKER_IMAGE_VERSION}'"
+                sh "git commit -m 'Update ${params.SERVICE} image to ${params.DOCKER_IMAGE_VERSION}' || true"
                 sshagent(['github-beatbuddy-k8s']) {
                     sh '''
                         mkdir -p ~/.ssh
