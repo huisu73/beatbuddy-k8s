@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: huisuz/beatbuddy-frontend:17
+          image: huisuz/beatbuddy-frontend:18
           resources:
             requests:
               memory: "128Mi"
